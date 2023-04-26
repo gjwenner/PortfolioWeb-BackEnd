@@ -20,7 +20,6 @@ public class Usuario {
     private int id;
     @NotNull
     private String nombre;
-    @NotNull
     @Column(unique = true)
     private String nombreUsuario;
     @NotNull
