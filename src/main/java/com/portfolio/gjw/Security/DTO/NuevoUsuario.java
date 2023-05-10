@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class NuevoUsuario {
     private String nombre;
-    private String nuevoUsuario;
+    private String nombreUsuario;
     private String email;
     private String password;
     private Set<String> roles = new HashSet<>();
@@ -19,12 +19,12 @@ public class NuevoUsuario {
         this.nombre = nombre;
     }
 
-    public String getNuevoUsuario() {
-        return nuevoUsuario;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setNuevoUsuario(String nuevoUsuario) {
-        this.nuevoUsuario = nuevoUsuario;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getEmail() {
@@ -50,6 +50,7 @@ public class NuevoUsuario {
     public void setRoles(Set<String> roles) {
         this.roles = roles;
     }
-    
+
+   
     
 }

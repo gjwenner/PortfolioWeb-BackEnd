@@ -10,6 +10,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.validation.constraints.NotNull;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,6 +21,7 @@ public class Usuario {
     private int id;
     @NotNull
     private String nombre;
+    @NotNull
     @Column(unique = true)
     private String nombreUsuario;
     @NotNull

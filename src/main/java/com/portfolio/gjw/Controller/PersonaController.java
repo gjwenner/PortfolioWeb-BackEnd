@@ -4,6 +4,7 @@ import com.portfolio.gjw.Entity.Persona;
 import com.portfolio.gjw.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,8 +25,8 @@ public class PersonaController {
         return ipersonaService.getPersona();
         
     }
-    
-    @PostMapping("personas/crear")
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
         return "La persona fue creada correctamente";
